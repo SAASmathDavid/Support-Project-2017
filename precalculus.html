@@ -23,11 +23,11 @@
         function answersFade() {
             if (!answersFadeToggle) {
                 $("#answers").slideDown(1000).fadeIn(500);
-                $("#answersButton").html("Hide Solutions <i class=\"fa fa-angle-down\"></i>");
+                $("#answersButton").html("Hide Solutions <i class=\"fa fa-times\"></i>");
                 answersFadeToggle = true;
             } else {
                 $("#answers").slideUp(1000).fadeOut(1000);
-                $("#answersButton").html("Show Solutions <i class=\"fa fa-angle-up\"></i>");
+                $("#answersButton").html("Show Solutions <i class=\"fa fa-search\"></i>");
                 answersFadeToggle = false;
             }
         }
@@ -64,6 +64,12 @@
             font-weight: bold;
             float: left;
             padding-right: 5px;
+        }
+        #prob1 {
+            margin-bottom: 25px;
+        }
+        #prob2 {
+            margin-bottom: 15px;
         }
     </style>
   </head>
@@ -119,7 +125,12 @@
                             <div class="col-xs-12 col-sm-10 blog-content">
                                 <a href="#"><img class="img-responsive img-blog" src="images/blog/Logo_11.png" width="100%" alt="" /></a>
                                 <h4>Consequat bibendum quam liquam viverra</h4>
-                                <a class="btn btn-primary" onclick="answersFade()" id="answersButton">Show Solutions <i class="fa fa-angle-up"></i></a>
+                                <p id="prob1"><b>Problem 1:</b> Find the domain and range for `f(x) = 4 - x^2`.</p>
+                                <p id="prob2"><b>Problem 2:</b> Find the domain and range for `f(x) = 5 root() (9 - x)`.</p>
+                                <p><b>Problem 3:</b> Find the domain and range for `f(x) = (5x)/(x - 8)`.</p>
+                                <p><b>Problem 4:</b> Find the domain for `f(x) = (4x - 20)/(root() (36 - x^2))`.</p>
+                                <p><b>Problem 5:</b> If `f(x) = x^2 + 4` and `g(x) = root() (2x - 3)`, find `(f @ g)(x)` and `(g @ f)(x)`.</p>
+                                <a class="btn btn-primary" onclick="answersFade()" id="answersButton">Show Solutions <i class="fa fa-search"></i></a>
                                 <div id="answers" class="wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="300ms"> <!-- style="visibility: visible;-webkit-animation-duration: 1000ms; -moz-animation-duration: 1000ms; animation-duration: 1000ms;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;"> -->
                                     <p><b>Solution 1:</b> `f` is defined for all values of `x` (since `f` is a polynomial), so the domain of `f` is `(-oo, oo)`. Since the graph of `f` is a parabola which opens downward with vertex at `(0, -4)`, the set of y-coordinates for the points on the graph of `f` consists of all y-values with `y <= 4`; so the range of `f` is the interval `(-oo, 4]`.</p>
                                     <p><b>Solution 2:</b> `f` is defined where `9 - c >= 0` or `9 >= x`, so the domain of `f` is the interval `(-oo, 9]`. Since `root() (9 - x) >= 0`, `f(x) = 5 + root (9 - x) >= 5` for any `x` in the domain of `f`, so the range of `f` is contained in `[5, oo)`. If `y >= 5`: `f(9-(y – 5)^2) = 5 + root() (9 - (9 - (y - 5))) = 5 + root() ((y - 5)^2) = 5 + (y - 5) = y`<br> (since `y - 5 >= 0`), so the range of `f` is actually equal to `[5, oo)`.</p>
