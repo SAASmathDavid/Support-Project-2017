@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Seattle Academy Math Support Site - Pre-Calculus</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" />		
+    <!-- =======================================================
+        Seattle Academy of Arts and Science
+        Author: Alek Curless and Saylor Green
+    ======================================================= -->
+      <!-- Put all your styles and bootstrap style changes here -->
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript">
+        var answersFadeToggle = false;
+        function answersFade() {
+            if (!answersFadeToggle) {
+                $("#answers").slideDown(1000).fadeIn(500);
+                $("#answersButton").html("Hide Solutions <i class=\"fa fa-times\"></i>");
+                answersFadeToggle = true;
+            } else {
+                $("#answers").slideUp(1000).fadeOut(1000);
+                $("#answersButton").html("Show Solutions <i class=\"fa fa-search\"></i>");
+                answersFadeToggle = false;
+            }
+        }
+    </script>
+    <style type="text/css">
+        .myButton {
+            background-color: red;
+        }
+        .teacher-bio a {
+            /*margin-bottom: 60px;*/
+        }
+        .bio_title {
+            padding-top: 5px;
+            font-size: 1.5em;
+        }
+        .avatar {
+            padding-top: 5px;
+            width: 64px;
+            height: 64px;
+        }
+        .blog .blog-item .blog-content p, td {
+            font-family: serif;
+            font-size: 16px;
+            color: #000;
+        }
+        .blog-item td {
+            font-family: inherit;
+        }
+        #answers {
+            display: none;
+            padding-top: 20px;
+        }
+        #MathJax-Element-25-Frame {
+            padding: 10px 0 10px 0;
+        }
+        .bio-entry {
+            color: #333;
+            font-weight: bold;
+            float: left;
+            padding-right: 5px;
+        }
+        #prob1 {
+            margin-bottom: 25px;
+        }
+        #prob2 {
+            margin-bottom: 15px;
+        }
+        .blog-item table > tbody > tr > td:nth-child(1) {
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+	<header>		
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="navigation">
+				<div class="container">					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<a href="index.html"><h1><span>saas</span>math</h1></a>
+						</div>
+					</div>
+					
+					<div class="navbar-collapse collapse">							
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="index.html">Home</a></li>
+                                <li role="presentation"><a href="algebra.html">Algebra</a></li>
+                                <li role="presentation"><a href="geometry.html">Geometry</a></li>
+                                <li role="presentation"><a href="advAlgebra.html">Advanced Algebra</a></li>
+                                <li role="presentation"><a href="precalculus.html" class="active">Pre-Calculus</a></li>
+                                <li role="presentation"><a href="calculus.html">Calculus</a></li>						
+							</ul>
+						</div>
+					</div>						
+				</div>
+			</div>	
+		</nav>		
+	</header>
+	
+	<div id="breadcrumb">
+		<div class="container">	
+			<div class="breadcrumb">							
+				<li><a href="index.html">Home</a></li>
+				<li>Blog</li>			
+			</div>		
+		</div>	
+	</div>
+	
+	<section id="blog" class="container">
+        <div class="blog">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-item">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-10 blog-content">
+                                <a href="#"><img class="img-responsive img-blog" src="images/blog/Logo_11.png" width="100%" alt="" /></a>
+                                <h4>Example PreCalculus Problems</h4>
+                                <p id="prob1"><b>Problem 1:</b> Find the domain and range for `f(x) = 4 - x^2`.</p>
+                                <p id="prob2"><b>Problem 2:</b> Find the domain and range for `f(x) = 5 root() (9 - x)`.</p>
+                                <p><b>Problem 3:</b> Find the domain and range for `f(x) = (5x)/(x - 8)`.</p>
+                                <p><b>Problem 4:</b> Find the domain for `f(x) = (4x - 20)/(root() (36 - x^2))`.</p>
+                                <p><b>Problem 5:</b> If `f(x) = x^2 + 4` and `g(x) = root() (2x - 3)`, find `(f @ g)(x)` and `(g @ f)(x)`.</p>
+                                <a class="btn btn-primary" onclick="answersFade()" id="answersButton">Show Solutions <i class="fa fa-search"></i></a>
+                                <div id="answers" class="wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="300ms"> <!-- style="visibility: visible;-webkit-animation-duration: 1000ms; -moz-animation-duration: 1000ms; animation-duration: 1000ms;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;"> -->
+                                    <p><b>Solution 1:</b> `f` is defined for all values of `x` (since `f` is a polynomial), so the domain of `f` is `(-oo, oo)`. Since the graph of `f` is a parabola which opens downward with vertex at `(0, -4)`, the set of y-coordinates for the points on the graph of `f` consists of all y-values with `y <= 4`; so the range of `f` is the interval `(-oo, 4]`.</p>
+                                    <p><b>Solution 2:</b> `f` is defined where `9 - c >= 0` or `9 >= x`, so the domain of `f` is the interval `(-oo, 9]`. Since `root() (9 - x) >= 0`, `f(x) = 5 + root (9 - x) >= 5` for any `x` in the domain of `f`, so the range of `f` is contained in `[5, oo)`. If `y >= 5`: `f(9-(y – 5)^2) = 5 + root() (9 - (9 - (y - 5))) = 5 + root() ((y - 5)^2) = 5 + (y - 5) = y`<br> (since `y - 5 >= 0`), so the range of `f` is actually equal to `[5, oo)`.</p>
+                                    <p><b>Solution 3:</b> `f` is defined for `x - 8 != 0` or `x != 8`, so the domain of `f` is given by `(-oo, 8) uu (8, oo)`. To find the range of `f` we must determine for which y-values the equation `y = (5x)/(x - 8)` has a solution for `x`. Multiplying both sides of this equation by `x - 8` gives:<br> `(x - 8)y = 5x` or `yx - 8y = 5x`, so `yx - 5x = 8y rArr (y-5)x = 8y rArr x = (8y)/(5 - y)`. Therefore the equation `y = (5x)/(x - 8)` has a solution for `x` if `5 - y != 0` or `y != 5`, so the range of `f` is given by `(-oo, 5) uu (5, oo)`.</p>
+                                    <p><b>Solution 4:</b> `f` is defined wherever `36 – x^2 >= 0` (so the square root is defined) and `36 - x^2 != 0` (so the fraction is defined). Solving the inequality `36 - x^2 > 0` or `(6 - x)(6 + x) > 0` gives `-6 < x < 6`, so the domain off is `(-6, 6)`.</p>
+                                    <p><b>Solution 5:</b> `(f @ g)(x) = f(root() (2x-3)) = (root() (2x-3))^2 + 4 = 2x -3 + 4 = 2x + 1`, while `(g @ f)(x) = g(x^2 + 4) = root() (2(x^2 + 4) - 3) = root() (2x^2 +5)`.</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div><!--/.blog-item-->
+                        
+                    <div class="blog-item">
+                        <div class="row">
+                            <div class="col-sm-10 blog-content">
+                                <h4>PreCalculus Formulas</h4>
+                                <a href="https://fr.slideshare.net/matthewrmckenzie5/formula-sheet-for-pre-cal"><img class="img-responsive img-blog" src="images/PreCalc/Formulas.png" width="100%" alt="" /></a>
+                                <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</p>
+                                <a class="btn btn-primary readmore">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>    
+                    </div><!--/.blog-item-->
+
+                    <div class="blog-item">
+                        <div class="row">
+                            <div class="col-sm-10 blog-content">
+                                <h4>PreCalculus Definitions</h4>
+                                <table summary="" border="0" cellpadding="5">
+                                    <tbody><tr valign="top"><td width="150">Asymptote</td>
+                                        <td>A line or curve that approaches a given curve arbitrarily closely.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Curve</td>
+                                        <td>A continuous map from a one-dimensional space to an n-dimensional space. Loosely speaking, the word "curve" is often used to mean the function graph of a two- or three-dimensional curve.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Determinant</td>
+                                        <td>(1) A function that assigns a scalar to a square matrix (or, equivalently, its linear transformation).  (2) The value of this function for a particular matrix.  The matrix has an inverse if and only if its determinant is nonzero.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Parametric Equations</td>
+                                        <td>A set of equations that together express a set of quantities as explicit functions of a number of independent variables, which are known as parameters.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Plane</td>
+                                        <td>A two-dimensional surface defined by linear equations.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Plane Curve</td>
+                                        <td>A curve that lies in a single plane. A plane curve may be closed or open.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Polar Coordinates</td>
+                                        <td>A two-dimensional coordinate system in which points in two dimensions are given by an angle and a distance from the origin.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Rational Function</td>
+                                        <td>A function that can be written as the quotient of two polynomials.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Reflection</td>
+                                        <td>The operation of exchanging all points of a mathematical object with their mirror images.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Rotation</td>
+                                        <td>The turning of an object or coordinate system about a fixed point.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Rotation Matrix</td>
+                                        <td>A matrix that corresponds to the linear transformation of a rotation.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Scalar</a></td>
+                                        <td>A value (such as a measurement) that has only magnitude but not direction.  This contrasts with a vector, which has direction as well as magnitude.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Spherical Coordinates</td>
+                                        <td>A coordinate system in which points in three-dimensional space are given by two angles and a distance from the origin.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Tangent Line</td>
+                                        <td>A line that touches but does not cross a curve at a given point.</td>
+                                    </tr>
+                                    <tr valign="top"><td width="150">Translation</td>
+                                        <td>A transformation consisting of a constant shift with no rotation or stretching.</td>
+                                    </tr>
+                                </tbody></table>
+                                <a class="btn btn-primary readmore">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>    
+                    </div><!--/.blog-item-->                                            
+                        
+                    <ul class="pagination pagination-lg">
+                        <li><a href="#"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Next Page<i class="fa fa-long-arrow-right"></i></a></li>
+                    </ul><!--/.pagination-->
+                </div><!--/.col-md-8-->
+
+                <aside class="col-md-4">
+                    <div class="widget search">
+                        <form role="form">
+                            <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
+                        </form>
+                    </div><!--/.search-->
+    				
+    				<div class="widget categories">
+                        <!--Repurposed for teacher section-->
+                        <h3>Pre-Calculus Teachers</h3>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="single_comments teacher-bio">
+                                    <img class="avatar img-rounded" src="images/PreCalc/willyAvatar.png" alt=""  />
+                                    <h4 class="bio_title">Willy Felton </h4>
+                                    <span class="bio-entry">Bio: </span><p> Willy has taught mathematics (including algebra, geometry, pre-calculus, and trigonometry) as well as computer science at the Community School in Sun Valley, Idaho, as well as Forest Ridge School of the Sacred Heart here in Seattle. While at the Community School he also served as the Assistant Director of Technology. In addition, Willy coaches basketball, has been an outdoor trip leader, and was a software developer for AT&T Wireless.</p>
+                                    <span class="bio-entry">Email: </span><a href="mailto:WillyFelton@seattleacademy.org">WillyFelton@seattleacademy.org</a>
+                                </div>
+                                <div class="single_comments teacher-bio">
+                                    <img class="avatar img-rounded" src="images/PreCalc/catherineAvatar.png" alt=""  />
+                                    <h4 class="bio_title">Catherine Clem </h4>
+                                    <span class="bio-entry">Bio: </span><p>Catherine does not currently have a bio on the insideSAAS site.</p>
+                                    <span class="bio-entry">Email: </span><a href="mailto:CatherineClem@seattleacademy.org">CatherineClem@seattleacademy.org</a>
+                                </div>
+                                
+                            </div>
+                        </div>                     
+                    </div><!--/.recent comments-->
+                     
+<!--to delete everything that appears on the side of the page, select everything from here...-->
+                    <div class="widget categories">
+                        <h3>Categories</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="blog_category">
+                                    <li><a href="#">Computers <span class="badge">04</span></a></li>
+                                    <li><a href="#">Smartphone <span class="badge">10</span></a></li>
+                                    <li><a href="#">Gedgets <span class="badge">06</span></a></li>
+                                    <li><a href="#">Technology <span class="badge">25</span></a></li>
+                                </ul>
+                            </div>
+                        </div>                     
+                    </div><!--/.categories-->
+    				
+    				<div class="widget archieve">
+                        <h3>Archieve</h3>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="blog_archieve">
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2015 <span class="pull-right">(97)</span></a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2015 <span class="pull-right">(32)</span></a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> October 2015 <span class="pull-right">(19)</span></a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2015 <span class="pull-right">(08)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>                     
+                    </div><!--/.archieve-->
+    				
+                    <div class="widget tags">
+                        <h3>Tag Cloud</h3>
+                        <ul class="tag-cloud">
+                            <li><a class="btn btn-xs btn-primary" href="#">Apple</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Barcelona</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Office</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Ipod</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Stock</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Race</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">London</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Football</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Porche</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
+                        </ul>
+                    </div><!--/.tags-->
+    				
+    				<div class="widget blog_gallery">
+                        <h3>Our Gallery</h3>
+                        <ul class="sidebar-gallery">
+                            <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
+                        </ul>
+                    </div><!--/.blog_gallery--><!--...to here-->
+    			</aside>  
+            </div><!--/.row-->
+        </div>
+    </section><!--/#blog-->
+	
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="social-icon">
+					<div class="col-md-4">
+						<ul class="social-network">
+							<li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+						</ul>	
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-md-offset-4">
+					<div class="copyright">
+						&copy; SAAS math 2017. All Rights Reserved.
+                        <div class="credits">
+                            <!-- 
+                                All the links in the footer should remain intact. 
+                                You can delete the links only if you purchased the pro version.
+                                Licensing information: https://bootstrapmade.com/license/
+                                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Company
+                            -->
+                            <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>
+					</div>
+				</div>						
+			</div>
+			<div class="pull-right">
+				<a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+			</div>
+		</div>
+	</footer>
+	
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery.js"></script>	
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>  
+	<script src="js/wow.min.js"></script>
+	<script src="js/functions.js"></script>
+	
+</body>
+</html>
