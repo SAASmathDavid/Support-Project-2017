@@ -15,14 +15,28 @@
     <!-- =======================================================
         Seattle Academy of Arts and Science
         Author: Alek Curless and Saylor Green
-        Author URL: http://electricteaching.com
     ======================================================= -->
       <!-- Put all your styles and bootstrap style changes here -->
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript">
+        var answersFadeToggle = false;
+        function answersFade() {
+            if (!answersFadeToggle) {
+                $("#answers").slideDown(1000).fadeIn(500);
+                $("#answersButton").html("Hide Solutions <i class=\"fa fa-angle-down\"></i>");
+                answersFadeToggle = true;
+            } else {
+                $("#answers").slideUp(1000).fadeOut(1000);
+                $("#answersButton").html("Show Solutions <i class=\"fa fa-angle-up\"></i>");
+                answersFadeToggle = false;
+            }
+        }
+    </script>
     <style type="text/css">
         .myButton {
             background-color: red;
         }
-        .teacher-bio {
+        .teacher-bio a {
             /*margin-bottom: 60px;*/
         }
         .bio_title {
@@ -33,6 +47,23 @@
             padding-top: 5px;
             width: 64px;
             height: 64px;
+        }
+        .blog .blog-item .blog-content p {
+            font-family: serif;
+            font-size: 16px;
+        }
+        #answers {
+            display: none;
+            padding-top: 20px;
+        }
+        #MathJax-Element-25-Frame {
+            padding: 10px 0 10px 0;
+        }
+        .bio-entry {
+            color: #333;
+            font-weight: bold;
+            float: left;
+            padding-right: 5px;
         }
     </style>
   </head>
@@ -88,8 +119,14 @@
                             <div class="col-xs-12 col-sm-10 blog-content">
                                 <a href="#"><img class="img-responsive img-blog" src="images/blog/Logo_11.png" width="100%" alt="" /></a>
                                 <h4>Consequat bibendum quam liquam viverra</h4>
-                                <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</p>
-                                <a class="btn btn-primary readmore">Read More <i class="fa fa-angle-right"></i></a>
+                                <a class="btn btn-primary" onclick="answersFade()" id="answersButton">Show Solutions <i class="fa fa-angle-up"></i></a>
+                                <div id="answers" class="wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="300ms"> <!-- style="visibility: visible;-webkit-animation-duration: 1000ms; -moz-animation-duration: 1000ms; animation-duration: 1000ms;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;"> -->
+                                    <p><b>Solution 1:</b> `f` is defined for all values of `x` (since `f` is a polynomial), so the domain of `f` is `(-oo, oo)`. Since the graph of `f` is a parabola which opens downward with vertex at `(0, -4)`, the set of y-coordinates for the points on the graph of `f` consists of all y-values with `y <= 4`; so the range of `f` is the interval `(-oo, 4]`.</p>
+                                    <p><b>Solution 2:</b> `f` is defined where `9 - c >= 0` or `9 >= x`, so the domain of `f` is the interval `(-oo, 9]`. Since `root() (9 - x) >= 0`, `f(x) = 5 + root (9 - x) >= 5` for any `x` in the domain of `f`, so the range of `f` is contained in `[5, oo)`. If `y >= 5`: `f(9-(y – 5)^2) = 5 + root() (9 - (9 - (y - 5))) = 5 + root() ((y - 5)^2) = 5 + (y - 5) = y`<br> (since `y - 5 >= 0`), so the range of `f` is actually equal to `[5, oo)`.</p>
+                                    <p><b>Solution 3:</b> `f` is defined for `x - 8 != 0` or `x != 8`, so the domain of `f` is given by `(-oo, 8) uu (8, oo)`. To find the range of `f` we must determine for which y-values the equation `y = (5x)/(x - 8)` has a solution for `x`. Multiplying both sides of this equation by `x - 8` gives:<br> `(x - 8)y = 5x` or `yx - 8y = 5x`, so `yx - 5x = 8y rArr (y-5)x = 8y rArr x = (8y)/(5 - y)`. Therefore the equation `y = (5x)/(x - 8)` has a solution for `x` if `5 - y != 0` or `y != 5`, so the range of `f` is given by `(-oo, 5) uu (5, oo)`.</p>
+                                    <p><b>Solution 4:</b> `f` is defined wherever `36 – x^2 >= 0` (so the square root is defined) and `36 - x^2 != 0` (so the fraction is defined). Solving the inequality `36 - x^2 > 0` or `(6 - x)(6 + x) > 0` gives `-6 < x < 6`, so the domain off is `(-6, 6)`.</p>
+                                    <p><b>Solution 5:</b> `(f @ g)(x) = f(root() (2x-3)) = (root() (2x-3))^2 + 4 = 2x -3 + 4 = 2x + 1`, while `(g @ f)(x) = g(x^2 + 4) = root() (2(x^2 + 4) - 3) = root() (2x^2 +5)`.</p>
+                                </div>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
@@ -131,11 +168,14 @@
                                 <div class="single_comments teacher-bio">
                                     <img class="avatar img-rounded" src="images/PreCalc/willyAvatar.png" alt=""  />
                                     <h4 class="bio_title">Willy Felton </h4>
-                                    <p>Willy has taught mathematics (including algebra, geometry, pre-calculus, and trigonometry) as well as computer science at the Community School in Sun Valley, Idaho, as well as Forest Ridge School of the Sacred Heart here in Seattle. While at the Community School he also served as the Assistant Director of Technology. In addition, Willy coaches basketball, has been an outdoor trip leader, and was a software developer for AT&T Wireless.</p>
+                                    <span class="bio-entry">Bio: </span><p> Willy has taught mathematics (including algebra, geometry, pre-calculus, and trigonometry) as well as computer science at the Community School in Sun Valley, Idaho, as well as Forest Ridge School of the Sacred Heart here in Seattle. While at the Community School he also served as the Assistant Director of Technology. In addition, Willy coaches basketball, has been an outdoor trip leader, and was a software developer for AT&T Wireless.</p>
+                                    <span class="bio-entry">Email: </span><a href="mailto:WillyFelton@seattleacademy.org">WillyFelton@seattleacademy.org</a>
                                 </div>
                                 <div class="single_comments teacher-bio">
                                     <img class="avatar img-rounded" src="images/PreCalc/catherineAvatar.png" alt=""  />
                                     <h4 class="bio_title">Catherine Clem </h4>
+                                    <span class="bio-entry">Bio: </span><p>Catherine does not currently have a bio on the insideSAAS site.</p>
+                                    <span class="bio-entry">Email: </span><a href="mailto:CatherineClem@seattleacademy.org">CatherineClem@seattleacademy.org</a>
                                 </div>
                                 
                             </div>
@@ -220,7 +260,7 @@
 				
 				<div class="col-md-4 col-md-offset-4">
 					<div class="copyright">
-						&copy; SAAS math. All Rights Reserved.
+						&copy; SAAS math 2017. All Rights Reserved.
                         <div class="credits">
                             <!-- 
                                 All the links in the footer should remain intact. 
