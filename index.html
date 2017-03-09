@@ -20,12 +20,27 @@
 
     <!-- Put all your styles and bootstrap style changes here -->
     <style type="text/css">
+    	.myWelcome{
+    		margin-top: -50px;
+    	}
+    	.myIntro{
+    		color: grey;
+    		font-weight: bolder;
+    	}
     	.myButton {
     		background-color: red;
     	}
     	.myPic{
     		width: 170px;
-
+    	}
+    	.myLogo{
+    		margin-top: -90px;
+    	}
+    	.ourImage{
+    		width: 400px;
+    	}
+    	.myTable{
+    		text-align: center;
     	}
 
     </style>
@@ -70,18 +85,19 @@
             <div class="carousel-inner">
                 <div class="item active" style="background-image: url(images/begBackground.JPG)">
                     <div class="container">
-                        <div class="row slide-margin">
+                        <div class="row slide-margin myWelcome">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h2 class="animation animated-item-1">Welcome to<br><span>SAAS Math</span></h2>
-                                    <p class="animation animated-item-2">Read, explore, and learn various math subjects from Seattle Academy students.</p>
+                                    <p class="animation animated-item-2 myIntro">Read, explore, and learn various math subjects from Seattle Academy's curriculum.
+                                    </p>
                                     <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/Logo_11.png" class="img-responsive">
+                                    <img src="images/slider/Logo_11.png" class="img-responsive myLogo">
                                 </div>
                             </div>
 
@@ -96,25 +112,17 @@
 		<div class="container">
 			<div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" >
 				<h2>About Us</h2>
-				<img src="images/groupPic.jpg" class="img-responsive"/>
-				<p>We are the 2017 winter trimester Software Development class. We learned the basics of coding in html, css, and javascript
+				<img src="images/groupPic.jpg" class="img-responsive ourImage"/>
+				<p>We are the 2017 winter trimester Software Development class. We learned the basics of coding in html, css, and javascript over 2 months, and as our final project, we made this page!
 				</p>
 			</div>
 			
 			<div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
-				<h2>Template built with Twitter Bootstrap</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat 
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat 
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
+				<h2>What is SAAS Math?</h2>
+				<p>On this site, you can explore and learn 6 different math subjects that Seattle Academy students learn through their high school years. 
+				<p>You can read, learn and interact with student-coded pages on algebra, geometry, advanced algebra, pre-calculus, and calculus. 
 				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. 
-				Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. 
-				Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque </p>
+				<p>Have fun exploring! We hope you can enjoy our program!</p>
 			</div>
 		</div>
 	</div>
@@ -126,35 +134,35 @@
 				</div>
 				<div class="col-md-2">
 					<div class="hi-icon-wrap hi-icon-images wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" >
-						<img src="images/EmmaHenry.jpg" class="img-round myPic">	
+						<img src="images/EmmaHenry.JPG" class="img-round myPic">	
 						<h2>Algebra</h2>
 						<p>By: Emma Conklin and Henry Lohman</p>
 					</div>
 				</div>
 				<div class="col-md-2">
 					<div class="hi-icon-wrap hi-icon-images wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
-						<img src="images/KarBen.jpg" class="img-round myPic">	
+						<img src="images/KarBen.JPG" class="img-round myPic">	
 						<h2>Geometry</h2>
 						<p>By: Karsten Griswold and Ben Scherzer</p>
 					</div>
 				</div>
 				<div class="col-md-2">
 					<div class="hi-icon-wrap hi-icon-images wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" >
-						<img src="images/DyMatt.jpg.jpg" class="img-round myPic">	
+						<img src="images/DyMatt.jpg.JPG" class="img-round myPic">	
 						<h2>Advanced Algebra</h2>
 						<p>By: Dylan Breslin and Matthew Dwight</p>
 					</div>
 				</div>
 				<div class="col-md-2">
 					<div class="hi-icon-wrap hi-icon-images wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" >
-						<img src="images/AlekSailor.jpg" class="img-round myPic">	
+						<img src="images/AlekSailor.JPG" class="img-round myPic">	
 						<h2>Pre-Calculus</h2>
 						<p>By: Alek Curless and Sailor Green</p>
 					</div>
 				</div>
 				<div class="col-md-2">
 					<div class="hi-icon-wrap hi-icon-images wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" >
-						<img src="images/AlexWynn.jpg" class="img-round myPic">	
+						<img src="images/AlexWynn.JPG" class="img-round myPic">	
 						<h2>Calculus</h2>
 						<p>By: Wynn O'Donnell and Alex Mihalski</p>
 					</div>
@@ -168,47 +176,69 @@
 	<div class="lates">
 		<div class="container">
 			<div class="text-center">
-				<h2>SAAS Math Teachers</h2>
+				<h2>Some SAAS Math Teachers</h2>
 			</div>
 			<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<img src="images/Felton-Willy.jpg" class="img-responsive"/>
-				<h3>Template built with Twitter Bootstrap</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat 
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				</p>
+				<h3>Willie Felton</h3>
+				<p>Teaches Pre-Calculus and Algebra 3 at SAAS</p>
 			</div>
 			
 			<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
 				<img src="images/Anderson-Gary.jpg" class="img-responsive"/>
-				<h3>Template built with Twitter Bootstrap</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat 
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				</p>
+				<h3>Gary Anderson</h3>
+				<p>Teaches Advanced Algebra, Statistics and Probability, and Software Development at SAAS</p>
 			</div>
 			
 			<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">				
 				<img src="images/Johns-David.jpg" class="img-responsive"/>
-				<h3>Template built with Twitter Bootstrap</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat 
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
-				</p>
+				<h3>David Johns</h3>
+				<p>Teaches Calculus, Advanced Algebra, and Software Development at SAAS</p>
 			</div>
 		</div>
 	</div>
 	
 	<section id="partner">
-        <div class="container">
-            <div class="center wow fadeInDown">
-               
-            </div>        
-        </div><!--/.container-->
-    </section><!--/#partner-->
+		<div class="container">
+  			<h2>SAAS Math Classes</h2>
+  			<p>Here is a schedule for some of the math classes in these subjects</p>            
+  		<table class="table">
+    	<thead>
+      		<tr>
+        		<th class="myTable">Class</th>
+        		<th class="myTable">Teacher</th>
+      		</tr>
+    	</thead>
+    	<tbody>
+      		<tr>
+        		<td>Geometry</td>
+        		<td>Dan McNamee</td>
+      		</tr>
+      		<tr>
+        		<td>Algebra 2</td>
+        		<td>Sarah Smith</td>
+      		</tr>
+      		<tr>
+        		<td>Advanced Algebra</td>
+        		<td>David Johns, Gary Anderson, and Mindy Watson</td>
+      		</tr>
+      		<tr>
+        		<td>Pre-Calculus</td>
+        		<td>Catherine Klem and Willie Felton</td>
+      		</tr>
+      		<tr>
+        		<td>Calculus</td>
+        		<td>Catherine Klem and David Johns</td>
+      		</tr>
+      		<tr>
+        		<td>Calculus 2</td>
+        		<td>Dan McNamee</td>
+      		</tr>
+    	</tbody>
+  		</table>
+		</div>
+        
+    </section><!--/#partner--> 
 	
 	<section id="conatcat-info">
         <div class="container">
@@ -219,8 +249,8 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <div class="media-body">
-                            <h2>Have a question or need a custom quote?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80</p>
+                            <h2>Have a question?</h2>
+                            <p>Look somewhere else! Plenty of places to learn math!</p>
                         </div>
                     </div>
                 </div>
@@ -245,7 +275,7 @@
 				
 				<div class="col-md-4 col-md-offset-4">
 					<div class="copyright">
-						&copy; Company Theme. All Rights Reserved.
+						&copy; Seattle Academy. Don't Copy Our Shit.
                         <div class="credits">
                             <!-- 
                                 All the links in the footer should remain intact. 
